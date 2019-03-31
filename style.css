@@ -1,24 +1,24 @@
 *{
     margin:0px;
     box-sizing: border-box;
+    border-style: none;
 }
 html, body{
 width: 100%;
 height: 100%;
 }
 body{
-    background-color: rgba(0, 0, 0, 0.486);
+    /* background-color: rgba(0, 0, 0, 0.486); */
 }
 .main{
     height: 800px;
     position: relative;
-    color: white;
-    background-color: white;
 }
 button{
     padding: 5px;
     width: 140px;
     border-radius: 10px;
+    margin: auto 0;
 }
 
 /* The element to apply the animation to */
@@ -26,7 +26,7 @@ button{
 .holdingall{
     height:700px;
     width:90%;
-     background-color: black;
+     background-color: white;
      position: absolute;
     top: 50px;
     left: 10%;
@@ -36,7 +36,7 @@ button{
    
 }
 .header {
-    background-color: black;
+    background-color: white;
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     margin-top: 20px;
     border-radius: 50%;
@@ -162,6 +162,39 @@ button{
         height: 100px;
         background-color: white;
     }
+    /* For the projects div  -showing projects done */
+    .projects{
+        height: 700px;
+        width: 100%;
+        box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    }
+    .slider{
+        height: 600px;
+        width:100%;
+        display: flex;
+    }
+    button{
+        width: 10%;
+        height: 200px;
+        background-color: white;
+    }
+    .project1{
+        width: 70%;
+        height: 80%;
+        margin: 0 auto;
+         margin-top: 0px;  
+    }
+    .project-text{
+        height: 100px;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .project1 img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+
+    }
     @media only screen and (max-width: 600px) {
         .holdingall{
             height:750px;
@@ -172,10 +205,7 @@ button{
             box-shadow: 2px 2px 8px;
             border-radius: 10%;
           
-        }
-        /* .logo{
-            margin-left: 20px;
-        } */
+        } 
         .righttext img{
             height: 180px;
             border-radius: 50%;
@@ -192,16 +222,16 @@ button{
         /* margin-left: 70px; */
    
         /* text-align: center; */
-   }
-   .fa{
-       display: none;
-   }
-   .passion{
-    display: flex;
-    width: 80%;
-    height: 30px;
-    margin: 0 auto;
-    margin-top: 180px;
-    
-}
-    }
+        }
+        .fa{
+            display: none;
+        }
+        .passion{
+            display: flex;
+            width: 80%;
+            height: 30px;
+            margin: 0 auto;
+            margin-top: 180px;
+            
+        }
+        }

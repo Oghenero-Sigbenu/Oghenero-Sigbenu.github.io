@@ -11,8 +11,7 @@ body{
     /* background-color: rgba(0, 0, 0, 0.486); */
 }
 .main{
-    height: 800px;
-    position: relative;
+    height: 700px;
 }
 button{
     padding: 5px;
@@ -21,88 +20,74 @@ button{
     margin: auto 0;
 }
 
-/* The element to apply the animation to */
+/* class hlding the upper container */
 
 .holdingall{
-    height:700px;
-    width:90%;
+    height:600px;
+    width:80%;
      background-color: white;
-     position: absolute;
-    top: 50px;
-    left: 10%;
-    box-shadow: 2px 2px 8px;
+    box-shadow: 2px 2px 8px whitesmoke;
     border-radius: 10%;
-    /* background-color: red; */
-   
+    margin: 5% auto;   
 }
 .header {
-    background-color: white;
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     margin-top: 20px;
-    border-radius: 50%;
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    /* background-color: aqua; */
+    width: 100%;
     z-index: 3;
+    height: 80px;
+    
   }
-  
+
   .header ul {
-    margin: 0;
+    margin:30px auto;
     padding: 0;
     list-style: none;
-    overflow: hidden;
-    /* background-color: #fff; */
     display: flex;
+    font-size: 1em;  
   }
   
   .header li a {
     display: block;
-    padding: 20px 70px;
-    /* border-right: 1px solid #f4f4f4; */
+    padding: 20px 10px;
     text-decoration: none;
     
   }
   
-  .header li a:hover,
-  .header .menu-btn:hover {
-    background-color: #f4f4f4;
+    .header li a:hover,
+    .header .menu-btn:hover {
+     background-color: #f4f4f4;
   }
-  .header .logo {
-    display: block;
-    /* float: left; */
-    /* width: 50%; */
-    font-size: 2em;
-    padding: 10px;
-    text-decoration: none;
-    margin-left: 40px;
-
-  }
-  .menu{
-    display: flex;
-    border-radius: 40px;
-    margin-right: 70px;
-    font-size: 2em;
-      
-  }
+   
+  /* div for the menu */
+  .nav{
+    width: 80%;
+    /* width: 100%; */
+    text-align: center; 
+    align-items: center;
+    margin: 70px auto;
+    /* margin-right: 150px; */
+   }
   
-  .menu-icon {
+  
+  .menu{
     cursor: pointer;
     display: inline-block;
-    padding: 28px 20px;
+    padding: 48px 20px;
     margin-right: 5px;
   }
   
-
 .textwrap{
-    height: 250px;
+    height: 350px;
+    margin-bottom: 100px;
 }
 
  .righttext img{
-      height: 250px;
+      /* height: 350px; */
       /* padding-top: 90px; */
-      border-radius: 50%;
+      border-radius: 25%;
       object-fit: cover;
+      width: 100%;
+      height: 100%;
       box-shadow: 2px 2px 5px;
       animation-name: new;
       animation-duration: 4s;
@@ -111,7 +96,8 @@ button{
      
 } 
 .righttext{
-    height: 250px; 
+    height: 100%;
+    width: 250px; 
     padding-top: 90px;
 }
 
@@ -122,42 +108,24 @@ button{
      padding-top: 90px;
 
 }
-.socialicons{
-    height: 300px;
-    background-color: rgba(224, 216, 216, 0.678);
-}
  .social{
-    width: 80%;
-    /* position: absolute;
-    top: 250px;
-    left: 20%; */
-    margin: 10px auto;
+    width: 50%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
+    margin-top: 100px;
     
     
     } 
     .fa{
-        /* background-color: rgb(190, 184, 184); */
         font-size: 20px;
         text-align: center;
         border: 1px solid gray;
         border-radius: 25px;
-       
         padding: 10px; 
-        /* margin-right: 95px; */
-        margin-top: 130px;
+        /* margin-top: 130px; */
     }
-    .passion{
-        /* display: flex; */
-        width: 80%;
-        height: 30px;
-        margin: 0 auto;
-        margin-top: 30px;
-      
-        text-align: center;
-    }
-    .newbox{
+        .newbox{
         width: 150px;
         height: 100px;
         background-color: white;
@@ -177,6 +145,7 @@ button{
         width: 10%;
         height: 200px;
         background-color: white;
+        margin-top: 110px;
     }
     .project1{
         width: 70%;
@@ -195,6 +164,8 @@ button{
         width: 100%;
 
     }
+
+    /* for screen size less than 600px */
     @media only screen and (max-width: 600px) {
         .holdingall{
             height:750px;
@@ -206,6 +177,23 @@ button{
             border-radius: 10%;
           
         } 
+
+        /*  responsive menu */
+        
+        .change div:nth-child(1){
+            transform: rotate(-45deg) translate(-10px, 10px)     
+        }
+
+        .change div:nth-child(2){
+            opacity: 0;
+        }
+        .change div:nth-child(3){
+            transform: rotate(45deg) translate(-10px, -10px)     
+        }
+        .menu li{
+            border-bottom:  2px black;
+            padding: 2px;
+        }
         .righttext img{
             height: 180px;
             border-radius: 50%;
@@ -233,5 +221,10 @@ button{
             margin: 0 auto;
             margin-top: 180px;
             
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            background-color: white;
         }
         }

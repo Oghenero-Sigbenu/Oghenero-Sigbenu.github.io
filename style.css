@@ -7,11 +7,22 @@
 html, body{
     width: 100%;
     height: 100%;
-    background-color:  #f4f8fc;
-
-        
+    background-color:  #f4f8fc;        
 }
-
+@font-face {
+    font-family: "Poppins";
+    src: url("./assets/fonts/Poppins-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "PoppinsSemiBold";
+    src: url("./assets/fonts/Poppins-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "PoppinsBold";
+    src: url("./assets/fonts/Poppins-Bold.ttf");
+  }
 /* upper section */
 .main{
     width: 100%;
@@ -32,7 +43,7 @@ button{
     display: flex;
     width: 450px;
     justify-content: space-between;
-    height: 190px;
+    /* height: 190px; */
     margin-top: 20px;
     flex-wrap: wrap;
     }
@@ -75,7 +86,6 @@ button{
     padding: 20px 10px;
     text-decoration: none;
     color: black;
-    /* font-family:  'Gill Sans', 'Gill Sans MT', "Calibri", 'Trebuchet MS', sans-serif; */
     transition: ease-in  .5s; }
 
   
@@ -86,16 +96,15 @@ button{
    
 /* div for the menu */
 .nav{
-    width: 50%;
+    width: 40%;
     text-align: center; 
-    margin: 0 auto;
 }
   
 .menu{
     cursor: pointer;
     display: inline-block;
     margin-right: 5px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Poppins";
 
 }
   .socials li a span{
@@ -109,9 +118,6 @@ button{
     color: black;
 
   }
-  .socials li a span{
-
-}
 .textwrap{
     height: 370px;
     width: 100%;
@@ -171,7 +177,7 @@ button{
 .project:hover .overlay{
     /* width: 35%; */
     /* bottom: 0; */
-    width: 100%;
+   height: 100%;
 }
 .overlay{
     background-color: rgba(32, 9, 20, 0.356);
@@ -179,8 +185,8 @@ button{
     bottom: 0%;
     left: 0;
     right: 0;
-    width: 0%;
-    height: 100%;
+    width:100%;
+    height:0%;
     transition: .5s ease;
     overflow: hidden;
 }
@@ -252,7 +258,8 @@ button{
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
-    margin-top: 100px;}
+    margin-top: 100px;
+}
 
 .skills button{
     background-color:  #f4f8fc;
@@ -274,10 +281,7 @@ button{
     
 /* For the projects div  -showing projects done */
 .projects{
-    /* height: 700px; */
     width: 100%;
-    /* box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1); */
-    /* margin: 0 auto; */
     overflow: hidden;
   }
 .project-t{
@@ -304,9 +308,9 @@ button{
 
 /* for screen size less than 600px */
 @media only screen and (max-width: 600px) {
-    /* .main{
-        height: 950px;
-    } */
+    .main{
+        height: 850px;
+    }
 .holdingall{
     height:820px;
     width:90%;
@@ -345,6 +349,7 @@ button{
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    padding: 20px;
 }
 .project{
     height: 400px;
@@ -353,29 +358,41 @@ button{
     
 } 
 .lefttext{
-        height:400px;
-        /* margin-right: 0px; */
-        /* padding-left: 0px; */
+        height:80%;
         padding-top: 20px;
         font-size: 15px;
         width:100%;
-        }
+        margin: 0 auto;
+}
 
 .lefttext h2, h3, p{
     font-size: 20px;
     text-align: left;
+    font-family: "PoppinsSemiBold";
 }
 .skills{
     display: flex;
-    width: 300px;
+    flex-direction: column !important;
+    width: 60%;
     justify-items: center;
     margin-top: 40px;
-    flex-wrap: wrap;
-    height: 200px;
-    margin-right: auto;
-    margin-left:  120px;
+    position: absolute;
+    left: 30%;
     }
-
+.skills button{
+        padding: 8px;
+        width: 80%;       
+} 
+.lef{
+    /* margin: 0px auto; */
+    overflow: hidden;
+    display: inline-block;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: 300px;
+    width: 100%;
+    }
 .project-t{
     margin: 0 0;
     height: 50px;
@@ -394,10 +411,6 @@ button{
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
-    .lefttext{
-        background-color: rgb(87, 22, 55);
-    }
-    
     .all{
         width: 80%;
         display: flex;
@@ -407,14 +420,9 @@ button{
     .project{
         height: 400px;
         width: 500px;
-        background-color: blue;
-    }
-    
+    } 
 }
         @media only screen and (min-width: 900px) and (max-width: 1100px) {
-    .lefttext{
-    }
-    
     .all{
         width: 90%;
         display: flex;
